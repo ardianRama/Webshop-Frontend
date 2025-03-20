@@ -82,70 +82,59 @@
     </header>
 
     <br /><br /><br /><br />
-    <!-- MAIN LÄGG TILL SM och L -->
-    <div class="container text-center">
-      <div class="row my-5">
-        <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 1
-          </button>
+
+
+     <!-- Bootstrap form -->
+    <form class="container m-5">
+
+        <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" class="form-control" id="exampleInputname" placeholder="Jane Doe">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <br>
+          </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <br>
         </div>
 
-        <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 2
-          </button>
+        <div class="form-group">
+            <label for="exampleInputAddress">Address</label>
+            <input type="text" class="form-control" id="exampleInputAddress" placeholder="happy street">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <br>
+          </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Area Code</label>
+            <input type="number" class="form-control" id="exampleInputAreaCode1" placeholder="xxxxx">
+            <br>
+          </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">District</label>
+            <input type="text" class="form-control" id="exampleInputDistrict" placeholder="Stockholm">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <br>
         </div>
 
-        <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 3
-          </button>
+          <div class="form-group">
+            <label for="exampleInputMobileNumber">Mobile number</label>
+            <input type="number" class="form-control" id="exampleInputMobileNumber" placeholder="07x-xxx xx xx">
+            <br>
+          </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <br>
         </div>
 
-        <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 4
-          </button>
-        </div>
-      </div>
-    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
     <!-- Lägg till Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
