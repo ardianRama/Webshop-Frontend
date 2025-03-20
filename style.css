@@ -1,0 +1,21 @@
+
+        .header-banner {
+            background-color: #ffffff; 
+            color: #000; 
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+
+        .hover-zoom {
+            transition: transform 0.3s ease-in-out;
+          }
+          
+          .hover-zoom:hover {
+            transform: scale(1.1);
+          }
+
+          
+   
