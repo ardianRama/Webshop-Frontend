@@ -20,7 +20,7 @@ function loadProducts(products) {
     const productDiv = document.createElement("div");
     productDiv.classList.add("col-lg-3", "col-md-6", "col-sm-12");
 
-    //lagt till ratio-4x3 på bilderna + object-fit: contain
+    //lagt till ratio-4x3 + object-fit: contain + text-truncate
     productDiv.innerHTML = `
           <div class="card h-100">
               <div class="ratio ratio-4x3">
