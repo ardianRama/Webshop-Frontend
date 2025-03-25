@@ -1,3 +1,33 @@
+async function getData() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const prodId = urlParams.get("product-id");
+
+  const data = await fetch('https://fakestoreapi.com/products/'+prodId)
+  .then(response => response.json());
+
+  const productImageElement = document.getElementById("product-image-form");
+  productImageElement.src = data.image;
+
+  const productTitleElement = document.getElementById("product-title-form");
+  productTitleElement.textContent = data.title;
+
+  const productDescElement = document.getElementById("product-desc-form");
+  productDescElement.textContent = data.description;
+
+  const productPriceElement = document.getElementById("product-price-form");
+  productPriceElement.textContent = `$${data.price}`;  
+}
+
+getData();
+
+function orderConfirmation() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const prodId = urlParams.get("product-id");
+  console.log("Found prod id ${prodId}" +prodId)
+  window.location.href('order-confirmation.html?product-id='+prodId)
+
+}
+
 function validateForm() {
     
     let isValid = true;
@@ -45,5 +75,8 @@ function validateForm() {
         isValid = false;
       }
 
+      if (isValid){
+        window.location.href='order-confirmation.html';
+      }
       return isValid;
     }

@@ -56,9 +56,7 @@
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -67,67 +65,77 @@
 
   <br /><br /><br /><br />
 
-  <!-- Bootstrap form -->
-  <form class="container m-5" onsubmit="return validateForm()">
+  <div class="product-form-container">
+  <!-- Bootstrap card -->
 
-    <div class="form-group">
-      <label for="exampleInputname">Full name</label>
-      <input type="text" class="form-control" id="exampleInputname" placeholder="Jane Doe" 
-      required minlength="2" maxlength="50">
-      <div id="nameError" class="text-danger"></div>
-      <br>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.com" '
-      required @ maxlength="50">
-      <div id="emailError" class="text-danger"></div>
-      <br>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputAddress">Address</label>
-      <input type="text" class="form-control" id="exampleInputAddress" placeholder="Storgatan 1" required minlength="2"
-        maxlength="50">
-        <div id="addressError" class="text-danger"></div>
-      <br>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputAreaCode">Postnummer</label>
-      <input type="text" class="form-control" id="exampleInputAreaCode" placeholder="12345" required pattern="^\d{5}$"
-        title="Postal code must consist of exactly 5 digits.">
-        <div id="areaCodeError" class="text-danger"></div>
-      <br>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputDistrict">District</label>
-      <input type="text" class="form-control" id="exampleInputDistrict" placeholder="Stockholm" required minlength="2"
-        maxlength="50">
-        <div id="districtError" class="text-danger"></div>
-      <br>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputMobileNumber">Mobile number</label>
-      <input type="text" class="form-control" id="exampleInputMobileNumber" placeholder="07x-xxx xx xx" required
-        maxlength="50" pattern="^[0-9()\-]{1,50}$"
-        title="Phone number can only contain digits (0-9), hyphens (-), and parentheses ().">
-      <div id="mobileError" class="text-danger"></div>
-      <br>
+    <div class="card order-card" style="width: 18rem;">
+      <img id="product-image-form" class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 id="product-title-form" class="card-title">Card title</h5>
+        <p id="product-desc-form" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p id="product-price-form" class="fw-bold"></p>
+      </div>
     </div>
 
 
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Do you want to get notify with our latest offer?</label>
-      <br><br>
-    </div>
+    <!-- Bootstrap form -->
+    <form class="container m-20" onsubmit="return validateForm()" action="javascript: orderConfirmation()">
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      <div class="form-group">
+        <label for="exampleInputname">Full name</label>
+        <input type="text" class="form-control" id="exampleInputname" placeholder="Jane Doe">
+        <div id="nameError" class="text-danger"></div>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="example@email.com">
+        <div id="emailError" class="text-danger"></div>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputAddress">Address</label>
+        <input type="text" class="form-control" id="exampleInputAddress" placeholder="Storgatan 1">
+          <div id="addressError" class="text-danger"></div>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputAreaCode">Postnummer</label>
+        <input type="text" class="form-control" id="exampleInputAreaCode" placeholder="12345"
+          title="Postal code must consist of exactly 5 digits.">
+          <div id="areaCodeError" class="text-danger"></div>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputDistrict">District</label>
+        <input type="text" class="form-control" id="exampleInputDistrict" placeholder="Stockholm">
+          <div id="districtError" class="text-danger"></div>
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputMobileNumber">Mobile number</label>
+        <input type="text" class="form-control" id="exampleInputMobileNumber" placeholder="07x-xxx xx xx"
+          title="Phone number can only contain digits (0-9), hyphens (-), and parentheses ().">
+        <div id="mobileError" class="text-danger"></div>
+        <br>
+      </div>
+
+
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Do you want to get notify with our latest offer?</label>
+        <br><br>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+  </div>
 
   <script src="order-form.js"></script>
 

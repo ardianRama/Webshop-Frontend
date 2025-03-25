@@ -36,7 +36,7 @@ function loadProducts(products) {
                     100
                   )}...</p>
                   <p class="fw-bold">${product.price}€</p>
-                  <button class="btn btn-outline-secondary mt-auto w-100">Buy</button>
+                  <button class="btn btn-outline-secondary mt-auto w-100" onclick="location.href='order-form.html?product-id=${product.id}'">Buy</button>
               </div>
           </div>
       `;

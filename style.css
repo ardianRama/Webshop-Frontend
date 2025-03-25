@@ -17,5 +17,17 @@
             transform: scale(1.1);
           }
 
-          
-   
+.product-form-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.order-card{
+  margin: auto;
+}
+
+.order-confirmation-text{
+  text-align: center;
+  margin-top: 5em;
+}
