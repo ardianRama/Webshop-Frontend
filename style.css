@@ -16,6 +16,9 @@
           .hover-zoom:hover {
             transform: scale(1.1);
           }
-
+          .category-image {
+            width: 250px;
+            height: auto;
+          }
           
    
