@@ -22,7 +22,10 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <!-- Ändrar färg på NavBar -->
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+            <!-- Image Logo-->
+
+            <img src="Images/logoipsum-361.svg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" />
+          <a class="navbar-brand ms-3" href="index.html">When Coding Meets Fashion</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -37,10 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -50,32 +50,24 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                <!--  Dropdown Menu -->
+                  Catagoires
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                  <li><a class="dropdown-item" href="products.html?category=men">Mens Clothing</a></li>
+                  <li><a class="dropdown-item" href="products.html?category=women">Womans Clothing</a></li>
+                  <li><a class="dropdown-item" href="products.html?category=jewelery">Jewelery</a></li>
+                  <li><a class="dropdown-item" href="products.html?category=electronics">Electronics</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="AboutUs.html">About Us</a>
+                    <a class="dropdown-item" href="AboutUs.html#contactID">Contact Us</a>
+
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -90,7 +82,7 @@
          <a href="products.html?category=women">
           <img
             class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-            src="Kvinna.png"
+            src="/Images/Kvinna.png"
             alt="Bild 1"
           />
         </a>
@@ -108,7 +100,7 @@
          <a href="products.html?category=men">
           <img
             class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-            src="Man2.png"
+            src="Images/Man.png"
             alt="Bild 1"
           />
         </a>
@@ -126,7 +118,7 @@
          <a href="products.html?category=jewelery">
           <img
             class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-            src="Armband.png"
+            src="Images/Armband.png"
             alt="Bild 1"
           />
         </a>
@@ -144,7 +136,7 @@
          <a href="products.html?category=electronics">
           <img
             class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-            src="TV.png"
+            src="/Images/TV.png"
             alt="Bild 1"
           />
         </a>
@@ -164,7 +156,7 @@
 
      <!-- Lägg till Alla Produkter pga product-container -->
     <div class="container my-5">
-      <h2 class="text-center mb-4">Alla Produkter</h2>
+      <h2 class="text-center mb-4">Products</h2>
       <div id="product-container"></div>
     </div>
    
