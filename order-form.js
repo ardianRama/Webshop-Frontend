@@ -24,7 +24,8 @@ function orderConfirmation() {
   const urlParams = new URLSearchParams(window.location.search);
   const prodId = urlParams.get("product-id");
   console.log("Found prod id ${prodId}" +prodId)
-  window.location.href('order-confirmation.html?product-id='+prodId)
+  window.location.href = 'order-confirmation.html?product-id=' + prodId;
+ // window.location.href('order-confirmation.html?product-id='+prodId)
 
 }
 

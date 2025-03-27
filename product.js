@@ -45,10 +45,15 @@ function loadProducts(products) {
     productDiv.innerHTML = `
           <div class="card h-100">
               <div class="ratio ratio-4x3">
+
                   <img src="${product.image}" 
-                       class="card-img-top img-fluid" 
+                       class="card-img-top img-fluid " 
                        style="object-fit: contain;" 
-                       alt="${product.title}">
+                       alt="${product.title}"
+                                  onclick="popUpWindow('${product.image}', '${product.title}', '${product.description}', '${product.price}')"
+
+                       >
+
               </div>
               <div class="card-body d-flex flex-column">
                   <h5 class="card-title text-truncate">${product.title}</h5>
@@ -67,5 +72,28 @@ function loadProducts(products) {
   productContainer.appendChild(rowDiv);
   };
 
+
+  function popUpWindow(imageSrc, title, description, price) {
+    const modal = document.getElementById("customModal");
+    document.getElementById("modalImage").src = imageSrc;
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalDesc").textContent = description;
+    document.getElementById("modalPrice").textContent = `$${price}`;
+    
+    modal.style.display = "block";
+  }
+  
+  // Close modal when clicking on 'X' button
+  document.querySelector(".close").addEventListener("click", function () {
+    document.getElementById("customModal").style.display = "none";
+  });
+  
+  // Close modal when clicking outside the modal content
+  window.addEventListener("click", function (event) {
+    const modal = document.getElementById("customModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
  
