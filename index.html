@@ -86,66 +86,88 @@
     <div class="container text-center">
       <div class="row my-5">
         <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 1
-          </button>
+         <!-- Länk till kategorin "women" -->
+         <a href="products.html?category=women">
+          <img
+            class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
+            src="Kvinna.png"
+            alt="Bild 1"
+          />
+        </a>
+        <a
+          href="products.html?category=women"
+          class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
+          style="background-color: transparent; border-radius: 0"
+        >
+          Woman
+        </a>
         </div>
 
         <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 2
-          </button>
+         <!-- Länk till kategorin "men" -->
+         <a href="products.html?category=men">
+          <img
+            class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
+            src="Man2.png"
+            alt="Bild 1"
+          />
+        </a>
+        <a
+          href="products.html?category=men"
+          class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
+          style="background-color: transparent; border-radius: 0"
+        >
+          Men
+        </a>
         </div>
 
         <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 3
-          </button>
+           <!-- Länk till kategorin "Jewlery" -->
+         <a href="products.html?category=jewelery">
+          <img
+            class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
+            src="Armband.png"
+            alt="Bild 1"
+          />
+        </a>
+        <a
+          href="products.html?category=jewelery"
+          class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
+          style="background-color: transparent; border-radius: 0"
+        >
+          Jewlery
+        </a>
         </div>
 
         <div class="col-md-3">
-          <a href=""
-            ><img
-              class="bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
-              src="https://picsum.photos/201"
-              alt="Bild 1"
-          /></a>
-          <button
-            style="background-color: transparent; border-radius: 0"
-            class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
-          >
-            Kategori 4
-          </button>
+             <!-- Länk till kategorin "Electronics" -->
+         <a href="products.html?category=electronics">
+          <img
+            class="category-image bg-image hover-zoom hover-overlay ripple img-fluid rounded-circle"
+            src="TV.png"
+            alt="Bild 1"
+          />
+        </a>
+        <a
+          href="products.html?category=electronics"
+          class="btn my-3 hover-zoom hover-overlay ripple d-block mx-auto"
+          style="background-color: transparent; border-radius: 0"
+        >
+        Electronics
+        </a>
+          
         </div>
       </div>
     </div>
+
+    <br>
+
+     <!-- Lägg till Alla Produkter pga product-container -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Alla Produkter</h2>
+      <div id="product-container"></div>
+    </div>
+   
 
     <!-- Lägg till Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
