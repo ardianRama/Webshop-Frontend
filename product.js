@@ -64,20 +64,8 @@ function loadProducts(products) {
 
     rowDiv.appendChild(productDiv);
   });
-    productDiv.innerHTML = `
-      <div class="card h-100">
-          <img src="${product.image}" class="card-img-top img-fluid p-3" alt="${product.title}">
-          <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${product.title}</h5>
-              <p class="card-text">${product.description.substring(0, 100)}...</p>
-              <p class="fw-bold">$${product.price}</p>
-              <button class="btn btn-outline-secondary mt-auto w-100">Buy</button>
-          </div>
-      </div>
-    `;
-    rowDiv.appendChild(productDiv);
-  });
+  productContainer.appendChild(rowDiv);
+  };
 
-  productContainer.appendChild(rowDiv);
-  productContainer.appendChild(rowDiv);
-}
+
+ 
