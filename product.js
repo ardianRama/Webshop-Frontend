@@ -105,3 +105,15 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
+
+// Funktion för att uppdatera varukorgsantalet
+function updateCartCounter(count) {
+  document.getElementById("cart-counter").textContent = count;
+}
+
+// Exempel på att öka räknaren när något läggs till
+let cartCount = 0;
+function addToCart() {
+  cartCount++;
+  updateCartCounter(cartCount);
+}
