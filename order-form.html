@@ -140,18 +140,20 @@
           </tbody>
         </table>
         <h4>Total: $<span id="cart-total">0</span></h4>
-        <button class="btn btn-success" onclick="checkout()">
-          Proceed to Checkout
+        <button
+          id="checkout-btn"
+          class="btn btn-success"
+          onclick="orderConfirmation()"
+          disabled
+        >
+          Payment
         </button>
+
         <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
       </div>
 
       <!-- Bootstrap form -->
-      <form
-        class="container m-20"
-        onsubmit="return validateForm()"
-        action="javascript: orderConfirmation()"
-      >
+      <form class="container m-20" onsubmit="return validateForm()">
         <div class="form-group">
           <label for="exampleInputname">Full name</label>
           <input
