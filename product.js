@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter(); // Uppdatera varukorgsräknaren på alla sidor
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname.includes("order-confirmation.html")) {
+    clearCart(); // Återanvänd funktionen för att rensa varukorgen
+  }
+});
+
 // Hämta kategori från URL, defaulta till "all"
 const params = new URLSearchParams(window.location.search);
 const selectedCategory = params.get("category") || "all";
