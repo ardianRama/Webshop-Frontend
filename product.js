@@ -153,9 +153,9 @@ function loadCart() {
         <td>${item.title}</td>
         <td>$${(item.price * item.quantity).toFixed(2)}</td>
         <td>
-          <button class="btn btn-sm btn-success" onclick="increaseQuantity(${index})">+</button>
-          ${item.quantity}
           <button class="btn btn-sm btn-warning" onclick="decreaseQuantity(${index})">-</button>
+          ${item.quantity}
+          <button class="btn btn-sm btn-success" onclick="increaseQuantity(${index})">+</button>
         </td>
       </tr>
     `;
