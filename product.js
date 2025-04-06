@@ -10,14 +10,15 @@ const categoryMap = {
   electronics: "electronics",
 };
 
-// Anropa getData med den valda kategorin
+// Anropar funktionen getData med två argument.
+// URL till API:t där produkterna finns och en vald kategori t ex "mens clothing".
 getData("https://fakestoreapi.com/products", selectedCategory);
 
-// Här definieras getData och loadProducts-funktionerna
+// Asynkron funktion med fetch för att hämta data från nätet
 async function getData(url, category) {
   try {
-    const response = await fetch(url);
-    let products = await response.json();
+    const response = await fetch(url); // Hämta produkterna från API:t. Await pausar funktionen tills fetch är klar.
+    let products = await response.json(); // Gör om svaret till JSON (en array med produktobjekt)
 
     // Filtrera om kategori inte är "all"
     if (category !== "all" && categoryMap[category]) {
@@ -25,25 +26,28 @@ async function getData(url, category) {
         (product) => product.category === categoryMap[category]
       );
     }
-
+    // Skickar den filtrerade listan vidare till loadProducts för att visa dem på sidan.
     loadProducts(products);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 }
 
+// Skapar produktkort
 function loadProducts(products) {
-  const productContainer = document.getElementById("product-container");
+  const productContainer = document.getElementById("product-container"); // Hämtar HTML-elementet där produkterna ska visas
   productContainer.innerHTML = ""; // Rensa tidigare innehåll
 
+  // Skapar ett div-element med klasser för Bootstrap-rader och gap-4 mellan kolumner.
   const rowDiv = document.createElement("div");
   rowDiv.classList.add("row", "g-4");
 
+  // Loopar igenom varje produkt och skapar div för varje produkt, som får kolumnstorlek för olika skärmstorlekar
   products.forEach((product) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add("col-lg-3", "col-md-6", "col-sm-12");
 
-    // Lagt till ratio-4x3 + object-fit: contain + text-truncate
+    // Lägger in HTML för varje produkt och skapar kort
     productDiv.innerHTML = `
       <div class="card h-100">
         <div class="ratio ratio-4x3">
@@ -77,9 +81,11 @@ function loadProducts(products) {
       </div>
     `;
 
+    // Lägg till produkt i raden
     rowDiv.appendChild(productDiv);
   });
 
+  // Lägg till rad i HTML
   productContainer.appendChild(rowDiv);
 }
 
