@@ -1,5 +1,6 @@
-// Hämta kategori från URL, defaulta till "all"
+// Hämta kategori från URL
 const params = new URLSearchParams(window.location.search);
+// Hämta ut värdet från URL
 const selectedCategory = params.get("category") || "all";
 
 // Mappa dina query-parametrar till API-kategorier
@@ -18,15 +19,15 @@ getData("https://fakestoreapi.com/products", selectedCategory);
 async function getData(url, category) {
   try {
     const response = await fetch(url); // Hämta produkterna från API:t. Await pausar funktionen tills fetch är klar.
-    let products = await response.json(); // Gör om svaret till JSON (en array med produktobjekt)
+    let products = await response.json(); // Konverterar datat till en array av objekt.
 
-    // Filtrera om kategori inte är "all"
+    // Filtrera om användaren har valt en specifik kategori
     if (category !== "all" && categoryMap[category]) {
       products = products.filter(
         (product) => product.category === categoryMap[category]
       );
     }
-    // Skickar den filtrerade listan vidare till loadProducts för att visa dem på sidan.
+    // Skickar produkterna vidare till loadProducts för att visa dem på sidan.
     loadProducts(products);
   } catch (error) {
     console.error("Error fetching data:", error);
